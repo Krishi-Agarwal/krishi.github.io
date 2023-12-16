@@ -1,0 +1,183 @@
+
+.glow body {
+    padding: 0;
+    margin: 0;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.glow h1 {
+    align-items: baseline;
+    color: hsl(0, 0%, 28%);
+    font-size: 30px;
+    font-weight: bold;
+    font-family: monospace;
+    letter-spacing: 3px;
+    cursor: pointer;
+}
+
+.glow h1 span {
+    transition: 0.5s ease-out;
+}
+
+.glow h1:hover span:nth-child(1) {
+    margin-right: 5px;
+}
+
+.glow h1:hover span:nth-child(1):after {
+    transition: 0.5s ease-out;
+    content: " Agarwal";
+}
+
+
+.glow h1:hover span {
+    transition: 0.5s ease-out;
+    color: #fff;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff;
+}
+
+
+
+
+
+@keyframes lights {
+    0% {
+      color: hsl(230, 40%, 80%);
+      text-shadow:
+        0 0 1em hsla(320, 100%, 50%, 0.2),
+        0 0 0.125em hsla(320, 100%, 60%, 0.3),
+        -1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+        1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+    }
+    
+    30% { 
+      color: hsl(230, 80%, 90%);
+      text-shadow:
+        0 0 1em hsla(320, 100%, 50%, 0.5),
+        0 0 0.125em hsla(320, 100%, 60%, 0.5),
+        -0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
+        0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+    }
+    
+    40% { 
+      color: hsl(230, 100%, 95%);
+      text-shadow:
+        0 0 1em hsla(320, 100%, 50%, 0.5),
+        0 0 0.125em hsla(320, 100%, 90%, 0.5),
+        -0.25em -0.125em 0.125em hsla(40, 100%, 60%, 0.2),
+        0.25em 0.125em 0.125em hsla(200, 100%, 60%, 0.4);
+    }
+    
+    70% {
+      color: hsl(230, 80%, 90%);
+      text-shadow:
+        0 0 1em hsla(320, 100%, 50%, 0.5),
+        0 0 0.125em hsla(320, 100%, 60%, 0.5),
+        0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
+        -0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+    }
+    
+    100% {
+      color: hsl(230, 40%, 80%);
+      text-shadow:
+        0 0 1em hsla(320, 100%, 50%, 0.2),
+        0 0 0.125em hsla(320, 100%, 60%, 0.3),
+        1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+        -1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+    }
+    
+  }
+  
+  /* body {
+    margin: 0;
+    font: 100% / 1.5 Raleway, sans-serif;
+    color: hsl(230, 100%, 95%);
+    background: linear-gradient(135deg, hsl(230, 40%, 12%), hsl(230, 20%, 7%));
+    height: 100vh;
+    display: flex;
+  } */
+  
+.publications{
+    background-color: transparent !important;
+    text-align: center;
+    color: #fff;
+    font-size: 4.5rem;
+    font-weight: 500;
+    animation: lights 5s 750ms linear infinite;
+  }
+
+
+
+  .annimation-lumi {
+    text-align: center;
+    background: 50% 100% / 50% 50% no-repeat
+                radial-gradient(ellipse at bottom, #fff, transparent, transparent);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 2vw;
+    font-family: "Source Sans Pro", sans-serif;
+    animation: reveal 3000ms ease-in-out forwards 200ms,
+               glow 2500ms linear infinite 2000ms;}
+  
+    @keyframes reveal {
+      80%{
+        letter-spacing: 8px;
+      }
+      100% {
+        background-size: 300% 300%;
+      }
+    }
+    @keyframes glow {
+      40% {
+        text-shadow: 0 0 8px #fff;
+      }
+    }
+
+
+
+
+
+
+
+
+
+    .wavy {
+        margin-bottom: 4em !important;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: consolas;
+      }
+      .wavy {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: transparent;
+      }
+      .wavy {
+        position: relative;
+        -webkit-box-reflect: below -12px linear-gradient(transparent, rgba(0, 0, 0, 0.2));
+      }
+      .wavy span {
+        position: relative;
+        display: inline-block;
+        color: #fff;
+        font-size: 2em;
+        text-transform: uppercase;
+        animation: wave 1.5s ease-in-out infinite;
+        animation-delay: calc(.05s * var(--i))
+      }
+      @keyframes wave {
+        0%, 100% {
+          transform: translateY(0px);
+        }
+        20% {
+          transform: translateY(-20px);
+        }
+        40% {
+          transform: translateY(0px);
+        }
+      }
